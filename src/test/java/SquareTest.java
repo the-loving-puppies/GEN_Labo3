@@ -11,7 +11,7 @@ class SquareTest {
 
     @Test
     void testPositionSquare(){
-        Square square = new Square("Bank", 1);
-        assertEquals(1, square.getLocation());
+        Square square = new Square("Bank", 2);
+        assertEquals(2, square.getLocation());
     }
 }
