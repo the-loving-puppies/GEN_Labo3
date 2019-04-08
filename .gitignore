@@ -14,3 +14,9 @@ buildNumber.properties
 # IntelliJ IDEA
 .idea/
 *.iml
+
+#Eclipse IDEA
+
+.classpath
+.project
+.settings/
