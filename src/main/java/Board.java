@@ -1,7 +1,6 @@
 import java.util.LinkedList;
 
 public class Board {
-
     private static final int NUMBER_SQUARE = 40;
     private LinkedList<Square> board = new LinkedList<>();
 
