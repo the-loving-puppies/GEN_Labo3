@@ -2,11 +2,34 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class MonopolyGameTest {
+import java.util.LinkedList;
 
+class MonopolyGameTest {
+	
+	@Test
+	void testAFullTurn() {
+		// TO BE IMPLEMENTED
+	}
+    
     @Test
-    void testIfTravisIsOk() {
-        assertTrue(true);
+    void testIfMonopolyConstructorThrowsExceptions() {
+    	Board board = new Board();
+		Die dices[] = new Die[2];
+		Die dicesWrong1[] = new Die[1];
+		Die dicesWrong2[] = new Die[3];
+		LinkedList<Player> players = new LinkedList<>();
+		
+		// With not enough players
+		assertThrows(IllegalArgumentException.class, () -> { new MonopolyGame(players, board, dices);});
+		// With not enough dices
+		assertThrows(IllegalArgumentException.class, () -> { new MonopolyGame(players, board, dicesWrong1);});
+		// With too many dices
+		assertThrows(IllegalArgumentException.class, () -> { new MonopolyGame(players, board, dicesWrong2);});
+		// With too many players
+		for(int i = 0; i < 10; ++i) {
+			players.add(new Player("Bob", dices, board));
+		}
+		assertThrows(IllegalArgumentException.class, () -> { new MonopolyGame(players, board, dices);});
     }
 
 }
