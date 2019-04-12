@@ -3,7 +3,6 @@ public class Player {
     private Piece piece;
     private Die[] dice;
     private Board board;
-    private int randomNumber;
 
     public Player(String name, Piece piece, Board board) {
         this.name = name;
@@ -14,14 +13,16 @@ public class Player {
     }
 
     public void takeTurn() {
+        int randomNumber = 0;
+
         for (Die die : dice) {
             die.roll();
             randomNumber += die.getFaceValue();
         }
 
         Square oldLoc = piece.getLocation();
-        Square newLoc = board.setLocation(oldLoc, randomNumber);
+        Square newLoc = board.getSquare(oldLoc, randomNumber);
 
-        piece.setLocation(randomNumber);
+        piece.setLocation(newLoc);
     }
 }
