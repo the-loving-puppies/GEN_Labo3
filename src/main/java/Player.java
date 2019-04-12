@@ -4,12 +4,12 @@ public class Player {
     private Die[] dice;
     private Board board;
 
-    public Player(String name, Piece piece, Board board) {
+    public Player(String name, Die[] dice, Board board) {
         this.name = name;
-        this.piece = piece;
         this.board = board;
+        this.dice = dice;
 
-        dice = new Die[2];
+        piece = new Piece(board.getSquare(0));
     }
 
     public void takeTurn() {
