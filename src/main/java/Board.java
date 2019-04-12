@@ -27,5 +27,6 @@ public class Board {
         int index = board.indexOf(oldLoc);
         index += fvTot;
         return board.get(index);
+
     }
 }
