@@ -1,16 +1,23 @@
+import java.util.Arrays;
 import java.util.LinkedList;
 
 public class Cup {
-    private LinkedList<Die> dice;
+    private LinkedList<Die> dices;
     private int total;
 
-    public Cup(LinkedList<Die> dice) {
+    public Cup() {
         total = 0;
-        this.dice = dice;
+        LinkedList<Die> dices = new LinkedList<>();
+        dices.addAll(Arrays.asList(new Die(), new Die()));
+    }
+
+    public Cup(LinkedList<Die> dices) {
+        total = 0;
+        this.dices = dices;
     }
 
     public void roll() {
-        for(Die d : dice) {
+        for(Die d : dices) {
             d.roll();
             total += d.getFaceValue();
         }

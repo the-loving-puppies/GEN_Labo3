@@ -9,7 +9,7 @@ class PieceTest {
         Board board = new Board();
         Piece piece = new Piece(board.getSquare(15));
 
-        assertEquals(board.getSquare(15), piece.getLocation());
+        assertSame(board.getSquare(15), piece.getLocation());
     }
 
 }
