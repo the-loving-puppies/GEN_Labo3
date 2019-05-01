@@ -26,6 +26,10 @@ public class Player {
         netWorth -= cash;
     }
 
+    public void setLocation(Square square) {
+        piece.setLocation(square);
+    }
+
     public void takeTurn() {
         int randomNumber = 0;
 
