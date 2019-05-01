@@ -3,6 +3,7 @@ public class GoSquare extends Square {
         super("Go Square");
     }
 
+    @Override
     public void landedOn(Player p){
         p.addCash(200);
     }

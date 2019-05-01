@@ -3,6 +3,7 @@ public class RegularSquare extends Square{
         super("Regular");
     }
 
+    @Override
     public void landedOn(Player p){
         // do nothing
     }

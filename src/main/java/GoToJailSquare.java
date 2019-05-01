@@ -3,6 +3,7 @@ public class GoToJailSquare extends Square {
         super("Go to jail Square");
     }
 
+    @Override
     public void landedOn(Player p){
         // TO DO
     }
