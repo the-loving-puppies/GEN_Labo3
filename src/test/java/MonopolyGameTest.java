@@ -4,9 +4,10 @@ import static org.junit.jupiter.api.Assertions.*;
 
 import java.util.LinkedList;
 
+
 class MonopolyGameTest {
 
-    class FakeDie extends Die {
+    static class FakeDie extends Die {
         private int faceValue;
 
         public FakeDie() {
