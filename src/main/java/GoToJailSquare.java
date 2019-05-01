@@ -1,8 +1,8 @@
 public class GoToJailSquare extends Square {
 
-    private Jail jail;
+    private JailSquare jail;
 
-    public GoToJailSquare(Jail jail){
+    public GoToJailSquare(JailSquare jail){
         super("Go to jail Square");
 
         this.jail = jail;
