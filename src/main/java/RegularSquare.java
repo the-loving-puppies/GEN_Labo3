@@ -1,6 +1,6 @@
 public class RegularSquare extends Square{
-    public RegularSquare(){
-        super("Regular");
+    public RegularSquare(String name){
+        super(name);
     }
 
     @Override
