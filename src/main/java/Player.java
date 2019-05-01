@@ -3,13 +3,27 @@ public class Player {
     private Piece piece;
     private Die[] dice;
     private Board board;
+    private int netWorth;
 
     public Player(String name, Die[] dice, Board board) {
         this.name = name;
         this.board = board;
         this.dice = dice;
+        this.netWorth = 1500;
 
         piece = new Piece(board.getSquare(0));
+    }
+
+    public int getNetWorth() {
+        return netWorth;
+    }
+
+    public void addCash(int cash) {
+        netWorth += cash;
+    }
+
+    public void reduceCash(int cash) {
+        netWorth -= cash;
     }
 
     public void takeTurn() {
@@ -19,9 +33,7 @@ public class Player {
             die.roll();
             randomNumber += die.getFaceValue();
         }
-
-        Square oldLoc = piece.getLocation();
-        Square newLoc = board.getSquare(oldLoc, randomNumber);
+        Square newLoc = board.getSquare(piece.getLocation(), randomNumber);
 
         piece.setLocation(newLoc);
     }
