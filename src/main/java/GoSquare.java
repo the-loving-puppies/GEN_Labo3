@@ -1,6 +1,6 @@
 public class GoSquare extends Square {
     public GoSquare(){
-        super("Go Square");
+        super("GO");
     }
 
     @Override

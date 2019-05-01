@@ -2,7 +2,7 @@ import static java.lang.Math.min;
 
 public class IncomeTaxSquare extends Square {
     public IncomeTaxSquare(){
-        super("IncomeTaxSquare");
+        super("Income Tax");
     }
 
     @Override
