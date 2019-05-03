@@ -32,7 +32,8 @@ public class Player {
 
     public void takeTurn() {
         cup.roll();
-
-        setLocation(board.getSquare(piece.getLocation(), cup.getTotal()));
+        Square loc = board.getSquare(piece.getLocation(), cup.getTotal());
+        setLocation(loc);
+        loc.landedOn(this);
     }
 }

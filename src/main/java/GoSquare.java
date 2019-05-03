@@ -1,10 +1,10 @@
 public class GoSquare extends Square {
-    public GoSquare(){
+    public GoSquare() {
         super("GO");
     }
 
     @Override
-    public void landedOn(Player p){
+    public void landedOn(Player p) {
         p.addCash(200);
     }
 }
