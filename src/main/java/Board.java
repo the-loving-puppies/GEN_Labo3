@@ -30,6 +30,7 @@ public class Board {
     public Square getSquare(Square oldLoc, int fvTot){
         int index = board.indexOf(oldLoc);
         index += fvTot;
+        index %= NUMBER_SQUARE;
         return board.get(index);
 
     }
