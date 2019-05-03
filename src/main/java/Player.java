@@ -30,6 +30,10 @@ public class Player {
         piece.setLocation(square);
     }
 
+    public Square getLocation() {
+        return piece.getLocation();
+    }
+
     public void takeTurn() {
         cup.roll();
         Square loc = board.getSquare(piece.getLocation(), cup.getTotal());

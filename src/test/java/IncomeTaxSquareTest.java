@@ -17,12 +17,10 @@ class IncomeTaxSquareTest {
 
     private FakeCup fc = new FakeCup();
     private Board board = new Board();
+    Player player = new Player("tester", fc, board);
 
     @Test
     void checkIfThePlayerGetsTaxed10percent() {
-        Player player = new Player("tester", fc, board);
-        IncomeTaxSquare square = new IncomeTaxSquare();
-
         player.reduceCash(1000);
         player.takeTurn();
 
@@ -31,9 +29,6 @@ class IncomeTaxSquareTest {
 
     @Test
     void checkIfThePlayerGetsTaxed200() {
-        Player player = new Player("tester", fc, board);
-        IncomeTaxSquare square = new IncomeTaxSquare();
-
         player.addCash(1500);
         player.takeTurn();
 
