@@ -2,7 +2,8 @@ import org.junit.jupiter.api.Test;
 
 import java.util.LinkedList;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertSame;
+import static org.junit.jupiter.api.Assertions.assertNotSame;
 
 public class GoToJailSquareTest {
 
@@ -23,10 +24,8 @@ public class GoToJailSquareTest {
         FakeCup fakeCup = new FakeCup();
         Player player = new Player("Rob", fakeCup, board);
 
-        Square square = board.getSquare(2);
-
         player.takeTurn();
-
-        assertEquals(square, player.getLocation());
+        assertNotSame(board.getSquare(3), player.getLocation());
+        assertSame(board.getSquare(2), player.getLocation());
     }
 }

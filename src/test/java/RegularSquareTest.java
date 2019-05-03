@@ -24,6 +24,6 @@ class RegularSquareTest {
         player.takeTurn();
 
         assertEquals(1500, player.getNetWorth());
-        assertEquals(board.getSquare(12), player.getLocation());
+        assertSame(board.getSquare(12), player.getLocation());
     }
 }
