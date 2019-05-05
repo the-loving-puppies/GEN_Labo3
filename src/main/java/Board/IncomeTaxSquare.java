@@ -1,3 +1,7 @@
+package Board;
+
+import Player.Player;
+
 import static java.lang.Math.min;
 
 public class IncomeTaxSquare extends Square {

@@ -1,3 +1,7 @@
+package Board;
+
+import Player.Player;
+
 public class RegularSquare extends Square {
     public RegularSquare(String name) {
         super(name);

@@ -1,8 +1,10 @@
+package Dice;
+
 import static org.junit.jupiter.api.Assertions.*;
 
+import Dice.Die;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.RepeatedTest;
-import org.junit.jupiter.api.Test;
 
 class DieTest {
 	static Die die;

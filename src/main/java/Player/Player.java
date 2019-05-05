@@ -1,3 +1,9 @@
+package Player;
+
+import Board.Board;
+import Dice.Cup;
+import Board.Square;
+
 public class Player {
     private String name;
     private Piece piece;

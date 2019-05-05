@@ -1,3 +1,7 @@
+package Board;
+
+import Player.Player;
+
 public class GoToJailSquare extends Square {
 
     private JailSquare jail;

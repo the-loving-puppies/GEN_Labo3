@@ -1,3 +1,7 @@
+package Player;
+
+import Board.Square;
+
 public class Piece {
     private Square location;
 

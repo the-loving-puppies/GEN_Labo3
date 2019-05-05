@@ -1,3 +1,8 @@
+package Dice;
+
+import Dice.Cup;
+import Dice.Die;
+import Game.MonopolyGameTest;
 import org.junit.jupiter.api.Test;
 
 import java.util.LinkedList;

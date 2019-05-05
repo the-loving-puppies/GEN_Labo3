@@ -1,3 +1,9 @@
+package Game;
+
+import Board.Board;
+import Dice.Cup;
+import Player.Player;
+
 import java.util.LinkedList;
 
 public class MonopolyGame {

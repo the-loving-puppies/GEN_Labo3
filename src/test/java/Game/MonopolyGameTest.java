@@ -1,3 +1,9 @@
+package Game;
+
+import Board.Board;
+import Dice.Cup;
+import Dice.Die;
+import Player.Player;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -5,9 +11,9 @@ import static org.junit.jupiter.api.Assertions.*;
 import java.util.LinkedList;
 
 
-class MonopolyGameTest {
+public class MonopolyGameTest {
 
-    static class FakeDie extends Die {
+    public static class FakeDie extends Die {
         private int faceValue;
 
         public FakeDie() {

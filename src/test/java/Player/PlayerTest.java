@@ -1,3 +1,8 @@
+package Player;
+
+import Board.Board;
+import Dice.Cup;
+import Player.Player;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
