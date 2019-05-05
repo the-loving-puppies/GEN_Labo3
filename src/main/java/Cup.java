@@ -7,7 +7,7 @@ public class Cup {
 
     public Cup() {
         total = 0;
-        LinkedList<Die> dices = new LinkedList<>();
+        dices = new LinkedList<>();
         dices.addAll(Arrays.asList(new Die(), new Die()));
     }
 

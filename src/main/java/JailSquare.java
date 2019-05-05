@@ -1,5 +1,5 @@
 public class JailSquare extends Square {
-    public JailSquare(){
+    public JailSquare() {
         super("Jail");
     }
 
