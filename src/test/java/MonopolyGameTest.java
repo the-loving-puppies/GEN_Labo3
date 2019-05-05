@@ -35,21 +35,15 @@ class MonopolyGameTest {
     @Test
     void testIfMonopolyConstructorThrowsExceptions() {
     	Board board = new Board();
-		Die dices[] = new Die[2];
-		Die dicesWrong1[] = new Die[1];
-		Die dicesWrong2[] = new Die[3];
+		Cup cup = new Cup();
 		LinkedList<Player> players = new LinkedList<>();
 		
 		// With not enough players
-		assertThrows(IllegalArgumentException.class, () -> { new MonopolyGame(players, board, dices);});
-		// With not enough dices
-		assertThrows(IllegalArgumentException.class, () -> { new MonopolyGame(players, board, dicesWrong1);});
-		// With too many dices
-		assertThrows(IllegalArgumentException.class, () -> { new MonopolyGame(players, board, dicesWrong2);});
+		assertThrows(IllegalArgumentException.class, () -> { new MonopolyGame(players, board, cup);});
 		// With too many players
 		for(int i = 0; i < 10; ++i) {
-			players.add(new Player("Bob", dices, board));
+			players.add(new Player("Bob", cup, board));
 		}
-		assertThrows(IllegalArgumentException.class, () -> { new MonopolyGame(players, board, dices);});
+		assertThrows(IllegalArgumentException.class, () -> { new MonopolyGame(players, board, cup);});
     }
 }

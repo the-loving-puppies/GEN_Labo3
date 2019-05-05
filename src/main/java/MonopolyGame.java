@@ -3,17 +3,17 @@ import java.util.LinkedList;
 public class MonopolyGame {
 	private final int N = 50;
 	private int rndCount;
-	private Die[] dices;
+	private Cup cup;
 	private Board board;
 	private LinkedList<Player> players;
 	
-	MonopolyGame(LinkedList<Player> players, Board board, Die[] dices) {
+	MonopolyGame(LinkedList<Player> players, Board board, Cup cup) {
 		// A game is played with 2 to 8 players only and 2 dices exactly
-		if(players.size() < 2 || players.size() > 8 || dices.length != 2) {
+		if(players.size() < 2 || players.size() > 8) {
 			throw new IllegalArgumentException();
 		}
 		
-		this.dices = dices;
+		this.cup = cup;
 		this.board = board;
 		this.players = players;
 		rndCount = 0;
@@ -34,13 +34,14 @@ public class MonopolyGame {
 	
 	static final void main(String... args) {
 		Board board = new Board();
-		Die dices[] = new Die[2];
+		Cup cup = new Cup();
 		LinkedList<Player> players = new LinkedList<>();
-		players.add(new Player("Jael", dices, board));
-		players.add(new Player("Alexandre", dices, board));
-		players.add(new Player("Jorge", dices, board));
+
+		players.add(new Player("Jael", cup, board));
+		players.add(new Player("Alexandre", cup, board));
+		players.add(new Player("Jorge", cup, board));
 		
-		MonopolyGame monopoly = new MonopolyGame(players, board, dices);
+		MonopolyGame monopoly = new MonopolyGame(players, board, cup);
 		
 		monopoly.playGame();
 	}

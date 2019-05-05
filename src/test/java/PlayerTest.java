@@ -6,18 +6,18 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class PlayerTest {
     static Board board;
-    static Die dices[];
+    static Cup cup;
     Player player;
 
     @BeforeAll
     static void init() {
         board = new Board();
-        dices = new Die[2];
+        cup = new Cup();
     }
 
     @BeforeEach
     void initEach() {
-        player = new Player("Toto", dices, board);
+        player = new Player("Toto", cup, board);
     }
 
     @Test
