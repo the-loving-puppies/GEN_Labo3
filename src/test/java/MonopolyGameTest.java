@@ -26,12 +26,7 @@ class MonopolyGameTest {
             return faceValue;
         }
     }
-	
-	@Test
-	void testAFullTurn() {
-		// TO BE IMPLEMENTED
-	}
-    
+
     @Test
     void testIfMonopolyConstructorThrowsExceptions() {
     	Board board = new Board();
